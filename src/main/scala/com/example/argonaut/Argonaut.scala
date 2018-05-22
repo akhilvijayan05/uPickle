@@ -15,7 +15,7 @@ class Argonaut {
   def deserialize(jsonString : String): Long = {
 
     val argonautStartTime = System.nanoTime
-    val parsed: Option[Product] = jsonString.decodeOption[Product]
+    val argonautProduct: Option[Product] = jsonString.decodeOption[Product]
     val argonautEndTime = System.nanoTime
     argonautEndTime - argonautStartTime
   }

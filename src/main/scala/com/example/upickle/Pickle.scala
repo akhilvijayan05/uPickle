@@ -17,7 +17,7 @@ class Pickle {
   def deserialize(jsonString : String): Long = {
 
     val pickleStartTime = System.nanoTime
-    val upickleJson = read[Product](jsonString)
+    val upickleProduct = read[Product](jsonString)
     val pickleEndTime = System.nanoTime
     pickleEndTime - pickleStartTime
   }

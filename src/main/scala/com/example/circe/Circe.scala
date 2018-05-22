@@ -16,7 +16,7 @@ class Circe {
   def deserialize(jsonString : String): Long = {
 
     val circeStartTime = System.nanoTime
-    val myPickle = decode[Product](jsonString)
+    val circeProduct = decode[Product](jsonString)
     val circeEndTime = System.nanoTime
     circeEndTime - circeStartTime
   }
